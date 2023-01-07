@@ -2,5 +2,10 @@
 
 ----
 
-A simple web application for validating, editing and formatting both `json` and `xml`.  The aim of this project is to create something that can be
-hosted internally for this simple task often needed by developers without exposing data potentially to third party sites.
+Validate, edit and format `json` and `xml`.  This is a learning repository where I have learned the basics of:
+
+    * React
+    * FastAPI
+    * Docker
+    * Docker compose
+    * Javascript
