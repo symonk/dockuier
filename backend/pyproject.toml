@@ -9,28 +9,3 @@ force_single_line = true
 known_first_party = 'app'
 default_section = 'THIRDPARTY'
 forced_separate = 'tests'
-
-[tool.flake8]
-# flake8 does not currently support pyproject.toml (handle via pre-commit directly).
-
-[tool.interrogate]
-ignore-init-method = true
-ignore-init-module = true
-ignore-magic = true
-ignore-semiprivate = false
-ignore-private = true
-ignore-property-decorators = false
-ignore-module = false
-ignore-nested-functions = false
-ignore-nested-classes = true
-ignore-setters = false
-fail-under = 50  # Keep it low for now.
-verbose = 1
-quiet = false
-color = true
-omit-covered-files = false
-
-[tool.docformatter]
-recursive = true
-wrap-summaries = 120
-blank = true
