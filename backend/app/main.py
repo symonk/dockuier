@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="Format")
+app = FastAPI(title="Dockuier")
 
 
 @app.get("/")
