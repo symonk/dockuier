@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import ApplicationHeader from './header';
+import Container from '@mui/material/Container';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -15,21 +16,23 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function CoreLayout() {
     return (
-        <Box sx={{ width: '100vh', height: '100vh'}}>
-            <Grid container spacing={4}>
-                <Grid item xs={12}>
-                    <ApplicationHeader></ApplicationHeader>
+        <Container maxWidth={false} disableGutters>
+            <Box>
+                <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                        <ApplicationHeader></ApplicationHeader>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Item>Two</Item>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Item>Three</Item>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Item>Four</Item>
+                    </Grid>
                 </Grid>
-                <Grid item xs={4}>
-                    <Item>Two</Item>
-                </Grid>
-                <Grid item xs={4}>
-                    <Item>Three</Item>
-                </Grid>
-                <Grid item xs={4}>
-                    <Item>Four</Item>
-                </Grid>
-            </Grid>
-        </Box>
+            </Box>
+        </Container>
     );
 }
