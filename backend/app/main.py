@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
-from response_classes import PrettyJson
+from .response_classes import PrettyJson
+import docker
 
 app = FastAPI(title="Dockuier")
 
@@ -12,7 +13,7 @@ async def root():
 
 
 @app.get("/api/containers", response_class=PrettyJson)
-async def containers():
+async def containers(real: bool=True):
     """Retrieve information for all running containers.  Return a dummy mock container json
     for now."""
     row = {
@@ -22,5 +23,8 @@ async def containers():
         "created": "4 days ago",
         "ports": ["79:80", "3000:3000"],
     }
+    if not real:
+        return [row for _ in range(5)]
+    return docker.from_env().containers(all=False)
 
-    return [row for _ in range(5)]
+
