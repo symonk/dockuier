@@ -5,7 +5,8 @@ services:
     build: backend/
     ports:
       - "127.0.0.1:8080:80"
-
+    volumes:
+     - "./backend:/app:cached"
   frontend:
     container_name: frontend
     build: frontend/

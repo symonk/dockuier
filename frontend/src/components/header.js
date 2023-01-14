@@ -1,10 +1,17 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
 
-export default function Header() {
+
+export default function ApplicationHeader() {
     return (
-        <div>
-            
-        </div>
+        <Box sx={{ width: '100vh' }}>
+            <AppBar position="sticky">
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1}}>
+                    Dockuier
+                </Typography>
+            </AppBar>
+        </Box>
     )
 }

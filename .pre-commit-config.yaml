@@ -1,4 +1,4 @@
-files: 'backend\/.*py'
+files: 'backend/.*py'
 repos:
   - repo: https://github.com/ambv/black
     rev: 22.12.0
