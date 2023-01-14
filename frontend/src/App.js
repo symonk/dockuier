@@ -1,13 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import ApplicationHeader from './components/header';
 import ContainerLayout from './components/grid';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <ContainerLayout></ContainerLayout>
+      <ContainerLayout sx={{width: 1, height: 1}} />
       </header>
     </div>
   );
