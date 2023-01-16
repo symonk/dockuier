@@ -1,6 +1,8 @@
 import json
 import typing
+
 from starlette.responses import Response
+
 
 class PrettyJson(Response):
     media_type = "application/json"

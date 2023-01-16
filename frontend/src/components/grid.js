@@ -1,10 +1,11 @@
-import * as React from 'react';
+import React, {useState, useEffect} from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import ApplicationHeader from './header';
 import Container from '@mui/material/Container';
+
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -16,20 +17,20 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function CoreLayout() {
+    const [containers, setContainers] = useState(null);
+    const [loading, setLoading] = useState(null);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        fetch(`http://localhost:8080/api/containers`)
+        .then((response) => console.log(response));
+    }, []);
+
     return (
         <Box sx= {{width: '100vw', height: '100vh'}}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <ApplicationHeader></ApplicationHeader>
-                </Grid>
-                <Grid item xs={4}>
-                    <Item>Two</Item>
-                </Grid>
-                <Grid item xs={4}>
-                    <Item>Three</Item>
-                </Grid>
-                <Grid item xs={4}>
-                    <Item>Four</Item>
                 </Grid>
             </Grid>
         </Box>
