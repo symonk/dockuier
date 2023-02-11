@@ -22,7 +22,7 @@ export default function ApplicationHeader() {
                     <Typography alight="left" variant="h6" component="div" sx={{ flexGrow: 1}}>
                         Dockuier
                     </Typography>
-                    <Badge badgeContent={10} color="error">
+                    <Badge badgeContent={15} color="error">
                         <NotificationsIcon/>
                     </Badge>
                 </Toolbar>

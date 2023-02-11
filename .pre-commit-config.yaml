@@ -1,7 +1,22 @@
-files: 'backend/'
+files: 'backend/|frontend/'
 repos:
+  - repo: meta
+    hooks:
+      - id: identity
+
+  #  Javascript hooks
+  - repo: https://github.com/eslint/eslint
+    rev: v8.34.0
+    hooks:
+      - id: eslint
+  - repo: https://github.com/prettier/prettier 
+    rev: 2.8.4
+    hooks:
+      - id: prettier
   - repo: https://github.com/ambv/black
     rev: 23.1.0
+
+    # Python Hooks 
     hooks:
       - id: black
         args: [--safe, --quiet, --line-length=120, --config=backend/pyproject.toml]

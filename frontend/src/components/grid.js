@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import ApplicationHeader from './header';
 import Container from '@mui/material/Container';
+import DockerCard from './dockercard';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -31,6 +32,9 @@ export default function CoreLayout() {
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <ApplicationHeader></ApplicationHeader>
+                </Grid>
+                <Grid item xs={4}>
+                    <DockerCard/>
                 </Grid>
             </Grid>
         </Box>
